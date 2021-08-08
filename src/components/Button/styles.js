@@ -7,5 +7,7 @@ export const CustomButton = styled.button`
   border: none;
   color: #fff;
   background-color: #3e51cc;
+  font-size: 1.1rem;
   outline: none;
+  cursor: pointer;
 `;
