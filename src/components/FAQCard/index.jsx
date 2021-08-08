@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, SubText } from './styles';
+import { Container, Sign, ContentWrapper, HeaderText, SubText } from './styles';
 
 const Card = ({ headerText, subText }) => {
   const [showText, setShowText] = useState(false);
@@ -8,9 +8,11 @@ const Card = ({ headerText, subText }) => {
   };
   return (
     <Container onClick={handleClick}>
-      <span>+</span>
-      <p>{headerText}</p>
-      {showText && <SubText>{subText}</SubText>}
+      {showText ? <Sign isFocused={showText}>-</Sign> : <Sign>+</Sign>}
+      <ContentWrapper>
+        <HeaderText isFocused={showText}>{headerText}</HeaderText>
+        {showText && <SubText>{subText}</SubText>}
+      </ContentWrapper>
     </Container>
   );
 };
