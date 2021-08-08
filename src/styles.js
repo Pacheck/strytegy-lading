@@ -7,7 +7,9 @@ const flexProps = css`
   align-items: center;
 `;
 
-export const AppContainer = styled.div``;
+export const AppContainer = styled.div`
+  max-width: 1820px;
+`;
 
 //Header
 export const AppHeader = styled.header`
@@ -127,5 +129,80 @@ export const CollaborationHeader = styled.p`
   text-align: center;
   font-size: 2.5rem;
 `;
+export const FAQWrapper = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+export const FAQHeader = styled.h3`
+  font-size: 2.5rem;
+`;
+export const FAQContent = styled.div`
+  width: 50.88rem;
+`;
 //Footer
-export const AppFooter = styled.footer``;
+export const AppFooter = styled.footer`
+  margin-top: 10rem;
+`;
+export const FooterHeader = styled.h2`
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-size: 2.5rem;
+`;
+export const FooterContentWrapper = styled.section`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dfe3fa;
+  min-height: 29.44rem;
+`;
+export const FooterContent = styled.div`
+  display: flex;
+`;
+export const FooterText = styled.p`
+  color: #3e51cc;
+  width: 25rem;
+  line-height: 1.8rem;
+  font-weight: 500;
+  font-size: 1.25rem;
+  margin-right: 4rem;
+`;
+export const FooterActionsWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+export const CreateAccountWrapper = styled.div`
+  input {
+    min-width: 14.38rem;
+    border: 2px solid #3e51cc;
+    padding: 1rem 0rem 1rem 0.5rem;
+    margin-right: 1rem;
+
+    border-radius: 8px;
+    ::placeholder {
+      color: #3e51cc;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+  }
+`;
+export const SocialMedia = styled.div``;
+export const SocialEmail = styled.h3`
+  margin: 2.5rem 0rem;
+  font-size: 2rem;
+  color: #3913b3;
+`;
+export const SocialMediaIcons = styled.div`
+  img {
+    margin-right: 2rem;
+  }
+`;
+export const LanguageContent = styled.div`
+  margin-top: 2.5rem;
+  a {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+  }
+`;

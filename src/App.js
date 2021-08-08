@@ -2,13 +2,17 @@ import { ReactComponent as HeaderLogo } from './assets/Strytegy-Logo.svg';
 
 import { mockedContent } from './mock/coreContent';
 import { CollaborationContent } from './mock/collaborationContent';
+import { FAQMock } from './mock/FAQContent';
 
-import * as Styled from './styles';
+import FacebookIcon from './assets/Icone-Facebook.svg';
+import LinkedinIcon from './assets/Icone-Linkedin.svg';
 
 import CustomButton from './components/Button';
 import Card from './components/CoreCard';
 import CollaborationCard from './components/CollaborationCard';
+import FAQCard from './components/FAQCard';
 
+import * as Styled from './styles';
 function App() {
   return (
     <Styled.AppContainer className="App">
@@ -77,16 +81,58 @@ function App() {
             A step beyond visual collaboration
           </Styled.CollaborationHeader>
           <Styled.CollaborationContent>
-            {CollaborationContent.map((item) => (
-              <CollaborationCard {...item} />
+            {CollaborationContent.map((item, index) => (
+              <CollaborationCard {...item} key={index} />
             ))}
           </Styled.CollaborationContent>
         </Styled.CollaborationWrapper>
-        {/* <Styled.FAQWrapper>
-          <Styled.FAQHeader></Styled.FAQHeader>
-        </Styled.FAQWrapper> */}
+        <Styled.FAQWrapper>
+          <Styled.FAQHeader>FAQ</Styled.FAQHeader>
+          <Styled.FAQContent>
+            {FAQMock.map((item, index) => (
+              <FAQCard
+                key={index}
+                headerText={item.header}
+                subText={item.text}
+              />
+            ))}
+          </Styled.FAQContent>
+        </Styled.FAQWrapper>
       </Styled.AppBody>
-      <Styled.AppFooter></Styled.AppFooter>
+      <Styled.AppFooter>
+        <Styled.FooterHeader>
+          Try your strategy with Strytegy
+        </Styled.FooterHeader>
+        <Styled.FooterContentWrapper>
+          <Styled.FooterContent>
+            <Styled.FooterText>
+              É um ambiente digital para pensar, explorar e dimensionar o
+              conhecimento nas organizações. É um ambiente digital para pensar,
+              explorar e dimensionar o conhecimento nas organizações. É um
+              ambiente digital para pensar, explorar e dimensionar o
+              conhecimento nas organizações. É um ambiente digital para pensar,
+              explorar e dimensionar.
+            </Styled.FooterText>
+            <Styled.FooterActionsWrapper>
+              <Styled.CreateAccountWrapper>
+                <input placeholder="Your work email address" />
+                <CustomButton textContent="Create Account" />
+              </Styled.CreateAccountWrapper>
+              <Styled.SocialMedia>
+                <Styled.SocialEmail>hey@startupin.me</Styled.SocialEmail>
+                <Styled.SocialMediaIcons>
+                  <img src={FacebookIcon} alt="Facebook Icon" />
+                  <img src={LinkedinIcon} alt="Linkedin Icon" />
+                </Styled.SocialMediaIcons>
+              </Styled.SocialMedia>
+              <Styled.LanguageContent>
+                <a href="#">PT</a>
+                <a href="#">EN</a>
+              </Styled.LanguageContent>
+            </Styled.FooterActionsWrapper>
+          </Styled.FooterContent>
+        </Styled.FooterContentWrapper>
+      </Styled.AppFooter>
     </Styled.AppContainer>
   );
 }
