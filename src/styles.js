@@ -16,6 +16,7 @@ export const AppHeader = styled.header`
   ${flexProps}
   justify-content: space-between;
   height: 7.69rem;
+  margin-bottom: 3rem;
 `;
 export const LogoWrapper = styled.div`
   ${flexProps}
