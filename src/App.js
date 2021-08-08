@@ -6,6 +6,7 @@ import { FAQMock } from './mock/FAQContent';
 
 import FacebookIcon from './assets/Icone-Facebook.svg';
 import LinkedinIcon from './assets/Icone-Linkedin.svg';
+import ImageVideo from './assets/video.png';
 
 import CustomButton from './components/Button';
 import Card from './components/CoreCard';
@@ -21,24 +22,35 @@ function App() {
           <HeaderLogo alt="Strytegy logo" height="2.94rem" width="9.06rem" />
         </Styled.LogoWrapper>
         <Styled.ActionsWrapper>
-          <a href="#">Log In</a>
-          <CustomButton textContent="Create Account" />
+          <a href="https://go.strytegy.com/login/">Log In</a>
+          <CustomButton textContent="Create Account" shouldTriggerAlert />
         </Styled.ActionsWrapper>
       </Styled.AppHeader>
       <Styled.AppBody>
         <Styled.MainContent>
           <Styled.TextWrapper>
-            <Styled.MainText>
-              Agile rooms to unlock collective intelligence
-            </Styled.MainText>
-            <p>
-              The online collaborative whiteboarding platform to bring teams
-              together, anytime, anywhere.
-            </p>
-            <Styled.MainActionsWrapper>
-              <a href="#">Create Account</a>
-              <a href="#">Watch Video</a>
-            </Styled.MainActionsWrapper>
+            <div>
+              <Styled.MainText>
+                Agile rooms to unlock collective intelligence
+              </Styled.MainText>
+              <Styled.ActionsInfoWrapper>
+                <Styled.MainInfo>
+                  The online collaborative whiteboarding platform to bring teams
+                  together, anytime, anywhere.
+                </Styled.MainInfo>
+                <Styled.MainActionsWrapper>
+                  {/* <Styled.AccountButton>Create Account</Styled.AccountButton> */}
+                  <CustomButton
+                    textContent="Create Account"
+                    shouldTriggerAlert
+                  />
+                  <Styled.VideoButton>Watch Video</Styled.VideoButton>
+                </Styled.MainActionsWrapper>
+                <aside>
+                  <img src={ImageVideo} alt="Strytegy usage example" />
+                </aside>
+              </Styled.ActionsInfoWrapper>
+            </div>
           </Styled.TextWrapper>
         </Styled.MainContent>
         <Styled.MainCore>
@@ -121,8 +133,12 @@ function App() {
               <Styled.SocialMedia>
                 <Styled.SocialEmail>hey@startupin.me</Styled.SocialEmail>
                 <Styled.SocialMediaIcons>
-                  <img src={FacebookIcon} alt="Facebook Icon" />
-                  <img src={LinkedinIcon} alt="Linkedin Icon" />
+                  <a href="https://www.facebook.com/go.strytegy/">
+                    <img src={FacebookIcon} alt="Facebook Icon" />
+                  </a>
+                  <a href="https://www.linkedin.com/company/strytegy/about/">
+                    <img src={LinkedinIcon} alt="Linkedin Icon" />
+                  </a>
                 </Styled.SocialMediaIcons>
               </Styled.SocialMedia>
               <Styled.LanguageContent>

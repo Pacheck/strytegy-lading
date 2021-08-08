@@ -13,6 +13,16 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-family: 'Nunito', sans-serif;
   }
+  #root {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (min-width: 1440px) {
+    html {
+      /* font-size: 20px; */
+    }
+  }
 `;
 
 ReactDOM.render(
