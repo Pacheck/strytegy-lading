@@ -26,6 +26,7 @@ export const ActionsWrapper = styled.div`
   ${flexProps}
   justify-content: space-between;
   width: 15.75rem;
+  margin-right: 6rem;
   a {
     font-size: 18px;
     color: #3913b3;
@@ -36,11 +37,14 @@ export const ActionsWrapper = styled.div`
 export const AppBody = styled.main``;
 export const MainContent = styled.section`
   background: url(${PostItBackground});
-  height: 29.56rem;
+  height: 33.56rem;
+  background-size: 116%;
+  background-repeat: no-repeat;
+  background-position-x: 33%;
 `;
 export const TextWrapper = styled.div`
   height: 18.44rem;
-  width: 58.69rem;
+  width: 63%;
   ${flexProps}
   justify-content: space-between;
   align-items: flex-end;
@@ -50,13 +54,58 @@ export const MainText = styled.h1`
   width: 39.58rem;
   font-size: 3.88rem;
   color: #2f2f2f;
+  margin-bottom: 2.2rem;
 `;
 export const SubText = styled.p`
   width: 22.13rem;
   color: #505050;
 `;
-export const MainActionsWrapper = styled.div``;
-export const MainCore = styled.section``;
+export const ActionsInfoWrapper = styled.div`
+  position: relative;
+  p {
+    width: 22rem;
+    margin: 2rem 0rem 3rem 0rem;
+  }
+
+  aside {
+    width: 26rem;
+    overflow: hidden;
+    border-radius: 50%;
+    position: absolute;
+    right: -34%;
+    top: -12%;
+  }
+  aside img {
+    margin: -10px 0px 0px -3px;
+    width: 46rem;
+  }
+`;
+export const MainInfo = styled.p`
+  color: #505050;
+`;
+export const MainActionsWrapper = styled.div`
+  a {
+    cursor: pointer;
+  }
+`;
+export const AccountButton = styled.a`
+  border: 2px solid #3e51cc;
+  padding: 1rem;
+  margin-right: 1.2rem;
+  border-radius: 8px;
+  color: #fff;
+  background-color: #3e51cc;
+`;
+export const VideoButton = styled.a`
+  border: 2px solid #3e51cc;
+  padding: 0.8rem;
+  margin-left: 1.2rem;
+  border-radius: 8px;
+  color: #3913b3;
+`;
+export const MainCore = styled.section`
+  margin-top: 9rem;
+`;
 
 export const CoreHeader = styled.h2`
   height: 5rem;
@@ -204,5 +253,6 @@ export const LanguageContent = styled.div`
   a {
     font-size: 1.2rem;
     margin-right: 1rem;
+    color: #505050;
   }
 `;
