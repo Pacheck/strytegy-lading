@@ -14,6 +14,11 @@ const fade = keyframes`
 export const Container = styled.div`
   display: flex;
   margin: 2rem;
+  cursor: pointer;
+  :hover {
+    transition: all 0.2s linear;
+    ${({ isFocused }) => !isFocused && 'transform: scale(1.01);'}
+  }
 `;
 export const Sign = styled.span`
   font-size: 1.5rem;

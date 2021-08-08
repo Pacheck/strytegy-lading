@@ -7,7 +7,7 @@ const Card = ({ headerText, subText }) => {
     setShowText(!showText);
   };
   return (
-    <Container onClick={handleClick}>
+    <Container onClick={handleClick} isFocused={showText}>
       {showText ? <Sign isFocused={showText}>-</Sign> : <Sign>+</Sign>}
       <ContentWrapper>
         <HeaderText isFocused={showText}>{headerText}</HeaderText>
